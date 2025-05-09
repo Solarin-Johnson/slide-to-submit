@@ -11,13 +11,17 @@ import { useEffect } from "react";
 import "react-native-reanimated";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
-  const [loaded] = useFonts({});
+  const [loaded] = useFonts({
+    InterMedium: require("../assets/fonts/Inter-Medium.ttf"),
+    InterSemiBold: require("../assets/fonts/Inter-SemiBold.ttf"),
+  });
 
   useEffect(() => {
     const configureSplashScreen = async () => {
@@ -40,7 +44,7 @@ export default function RootLayout() {
   }
 
   return (
-    <>
+    <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <ThemeProvider
           value={colorScheme === "dark" ? DarkTheme : DefaultTheme}
@@ -51,6 +55,6 @@ export default function RootLayout() {
           <StatusBar style="auto" />
         </ThemeProvider>
       </SafeAreaProvider>
-    </>
+    </GestureHandlerRootView>
   );
 }

@@ -19,7 +19,7 @@ export function ThemedText({
   return (
     <Text
       style={[
-        { color, fontFamily: "RobotoMedium" },
+        { color, fontFamily: "InterMedium" },
         type === "default" ? styles.default : undefined,
         type === "title" ? styles.title : undefined,
         type === "defaultSemiBold" ? styles.defaultSemiBold : undefined,
@@ -35,12 +35,11 @@ export function ThemedText({
 const styles = StyleSheet.create({
   default: {
     fontSize: 16,
-    lineHeight: 28,
+    lineHeight: 24,
   },
   defaultSemiBold: {
-    fontSize: 16,
-    lineHeight: 24,
-    fontWeight: "600",
+    fontSize: 17,
+    fontFamily: "InterSemiBold",
   },
   title: {
     fontSize: 32,

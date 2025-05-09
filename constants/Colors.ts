@@ -10,13 +10,11 @@ export const Colors = {
   light: {
     text: "#11181C",
     background: "#fff",
-    barColor: "#000000",
-    tint: tintColorLight,
+    barColor: "#F7F7F7",
   },
   dark: {
     text: "#ECEDEE",
     background: "#1F1F1F",
-    barColor: "#000000",
-    tint: tintColorDark,
+    barColor: "#2C2F30",
   },
 };
