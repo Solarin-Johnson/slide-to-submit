@@ -1,10 +1,4 @@
-import {
-  View,
-  StyleSheet,
-  StyleProp,
-  TextStyle,
-  ViewStyle,
-} from "react-native";
+import { View, StyleProp, TextStyle, ViewStyle } from "react-native";
 import MaskedView from "@react-native-masked-view/masked-view";
 import Animated, {
   useAnimatedStyle,
@@ -117,7 +111,3 @@ export default function ShimmeringText({
     </MaskedView>
   );
 }
-
-const styles = StyleSheet.create({
-  slider: {},
-});

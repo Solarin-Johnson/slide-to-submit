@@ -5,7 +5,7 @@ import {
   StyleProp,
   ViewStyle,
 } from "react-native";
-import React from "react";
+import React, { memo } from "react";
 import MaskedView from "@react-native-masked-view/masked-view";
 import ShimmeringText, { ShimmeringTextProps } from "./ShimmeringText";
 import { ThemedText } from "../ThemedText";
@@ -49,7 +49,7 @@ export interface SlideButtonProps {
   progress?: SharedValue<number>;
 }
 
-export default function SlideButton({
+function SlideButton({
   belowText = "Slide to submit",
   aboveText = "Confirm submit",
   finalText = "Success",
@@ -305,6 +305,8 @@ export default function SlideButton({
     </Animated.View>
   );
 }
+
+export default SlideButton;
 
 const styles = StyleSheet.create({
   container: {
